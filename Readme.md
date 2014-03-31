@@ -9,7 +9,7 @@
 
 ## Usage
 
-- Open http://path/to/app/report
+- Open http://[path to app]/report
 
 ## Unit tests
 
