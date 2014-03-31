@@ -1,0 +1,7 @@
+eugef_funda_report:
+    pattern:  /report
+    defaults: { _controller: EugefFundaBundle:Report:top }
+    
+eugef_funda_update:
+    pattern:  /report/update
+    defaults: { _controller: EugefFundaBundle:Report:update }

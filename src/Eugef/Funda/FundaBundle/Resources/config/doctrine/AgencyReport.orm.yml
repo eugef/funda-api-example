@@ -1,0 +1,31 @@
+Eugef\Funda\FundaBundle\Entity\AgencyReport:
+    type: entity
+    table: agency_report
+    id:
+        report:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+        agencyId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: agency_id
+    fields:
+        agencyName:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+            column: agency_name
+        amount:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+    lifecycleCallbacks: {  }

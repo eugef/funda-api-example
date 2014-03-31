@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:ng="http://angularjs.org" lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+        <title>{% block title %}Funda report{% endblock %}</title>
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="page-header">
+                <h1>Funda reports</h1>
+                <p>Determine which real estate agents (makelaars) have got houses (objects) for sale in Amsterdam.</p>
+                <form action="{{ path('eugef_funda_update') }}" method="GET">
+                    <button type="submit" class="btn btn-primary btn-lg">Update reports</button>
+                </form>    
+            </div>
+            {% for report in reports %}
+                <h2>{{ report.name }}</h2>
+                {% if report.top is not empty %}
+                    <p>Object analyzed: {{ report.total }}</p>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Agency</th>
+                                <th>Amount</th>
+                            </tr>
+                        </thead>    
+                        <tbody>
+                            {% for agency in report.top %}
+                                <tr>
+                                    <td>{{loop.index}}</td>
+                                    <td>{{agency.agency_name}}</td>
+                                    <td>{{agency.amount}}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                {% else %}
+                    <div class="alert alert-warning">Report has no data! Please run update.</div>
+                {% endif %}
+            {% endfor %}    
+        </div>     
+    </body>
+</html>

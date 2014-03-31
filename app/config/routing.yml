@@ -1,0 +1,4 @@
+eugef_funda:
+    resource: "@EugefFundaBundle/Resources/config/routing.yml"
+    prefix:   /
+
