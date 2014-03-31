@@ -1,5 +1,6 @@
 ## Installation
 
+- $ git clone git clone https://github.com/eugef/funda-api-example.git /path
 - $ php composer.phar install
  - Specify DB access credentials 
  - Valid Funda API key is required
