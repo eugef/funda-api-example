@@ -1,6 +1,8 @@
 ## Installation
 
 - $ php composer.phar install
+ - Specify DB access credentials 
+ - Valid Funda API key is required
 - $ php app/console doctrine:database:create
 - $ php app/console doctrine:schema:update --force
 
